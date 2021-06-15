@@ -21,6 +21,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import Avatar from '@material-ui/core/Avatar';
 import CardMembershipIcon from '@material-ui/icons/CardMembership';
 import { useHistory } from "react-router-dom";
+import Grid from "@material-ui/core/Grid";
 
 export default function SwipeableTemporaryDrawer() {
   const history = useHistory();
@@ -48,11 +49,16 @@ export default function SwipeableTemporaryDrawer() {
             aria-label="menu"
             onClick={toggleDrawer("top", true)}
           >
-            <Avatar alt="Suphadet" src= {`${process.env.PUBLIC_URL}/images/boss.jpg`} />
-            </IconButton>
-          <Typography variant="h6" >
-            Suphadet Vatjanajaroenrat
-          </Typography>
+            <Avatar alt="Suphadet" src={`${process.env.PUBLIC_URL}/images/boss.jpg`} />
+          </IconButton>
+          <Grid container justify="flex-start">
+            <Typography variant="h6" >
+              Suphadet Vatjanajaroenrat
+            </Typography>
+          </Grid>
+
+            <MenuIcon style={{ fill: '#FFFFFF' }} />
+
         </Toolbar>
       </AppBar>
 
@@ -67,38 +73,38 @@ export default function SwipeableTemporaryDrawer() {
           onKeyDown={toggleDrawer("top", false)}
         >
           <List style={{ background: '#0072A0' }}>
-            
-          <ListItem button key="Main" onClick = {() => history.push('/main')} >
+
+            <ListItem button key="Main" onClick={() => history.push('/main')} >
               <ListItemIcon>
-                <HomeIcon style={{fill: '#FFFFFF'}} />
+                <HomeIcon style={{ fill: '#FFFFFF' }} />
               </ListItemIcon>
               <ListItemText primary={<Typography type="body2" style={{ color: '#FFFFFF' }}>Home</Typography>} />
             </ListItem>
-            
-            <ListItem button key="Education" onClick = {() => history.push('/education')} >
+
+            <ListItem button key="Education" onClick={() => history.push('/education')} >
               <ListItemIcon>
-                <WorkIcon style={{fill: '#FFFFFF'}} />
+                <WorkIcon style={{ fill: '#FFFFFF' }} />
               </ListItemIcon>
               <ListItemText primary={<Typography type="body2" style={{ color: '#FFFFFF' }}>Education & Work Experience</Typography>} />
             </ListItem>
-            
-            <ListItem button key="Portfoldio" onClick = {() => history.push('/portfolio')}>
+
+            <ListItem button key="Portfoldio" onClick={() => history.push('/portfolio')}>
               <ListItemIcon>
-                <ImportContactsIcon style={{fill: '#FFFFFF'}} />
+                <ImportContactsIcon style={{ fill: '#FFFFFF' }} />
               </ListItemIcon>
               <ListItemText primary={<Typography type="body2" style={{ color: '#FFFFFF' }}>Portfolio (Project)</Typography>} />
             </ListItem>
 
-            <ListItem button key="skills" onClick = {() => history.push('/skills')} >
+            <ListItem button key="skills" onClick={() => history.push('/skills')} >
               <ListItemIcon>
-                <CardMembershipIcon style={{fill: '#FFFFFF'}} />
+                <CardMembershipIcon style={{ fill: '#FFFFFF' }} />
               </ListItemIcon>
               <ListItemText primary={<Typography type="body2" style={{ color: '#FFFFFF' }}>Skills & Certificates</Typography>} />
             </ListItem>
 
-            <ListItem button key="Socialmedia" onClick = {() => history.push('/social')}>
+            <ListItem button key="Socialmedia" onClick={() => history.push('/social')}>
               <ListItemIcon>
-                <GroupIcon style={{fill: '#FFFFFF'}} />
+                <GroupIcon style={{ fill: '#FFFFFF' }} />
               </ListItemIcon>
               <ListItemText primary={<Typography type="body2" style={{ color: '#FFFFFF' }}>Social Media</Typography>} />
             </ListItem>

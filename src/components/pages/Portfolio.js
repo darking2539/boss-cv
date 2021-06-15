@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
   },
   paper_left: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(1.5),
     textAlign: "justify",
   },
   large: {
@@ -37,7 +37,10 @@ export default function Portfolio() {
           <Paper className={classes.paper_left}>
             <b>Smart Home with HomeAssistant (2021)</b> <br />
             Home Assistant is an open-source platform for build smart homes. 
-            This project is implement smart home devices to this platform.  <br/><br/>            
+            This project is implement smart home devices to this platform.
+            Infrastructure use cloud and Rasberrypi for run this platform shown on below photos  <br/><br/>   
+
+            <a href = {`${process.env.PUBLIC_URL}/details/homeassistant.jpg`}>Photos Link</a>  <br/>         
           </Paper>
         </Grid>
       </Grid>

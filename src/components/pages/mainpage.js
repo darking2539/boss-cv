@@ -93,7 +93,7 @@ export default function MainPage() {
           <Paper className={classes.paper_just}>
           My name is Supadet Vatjanajaroenrat. I graduated  in an Electrical Engineering bachelor degree 
           from Chulalongkorn Unversity, Thailand and started learning Stack developer based on website and mobile application. 
-          I also interested in the new robitic technology, IoT system, robots in manufacturing , and etc. 
+          I also interested in the new technology, IoT system, robots in manufacturing , and etc. 
           I know that my works are just a small parts but I am sure these are the new trends to make our live better.
           </Paper>
         </Grid>
