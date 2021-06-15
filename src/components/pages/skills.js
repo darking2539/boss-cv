@@ -14,6 +14,8 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from '@material-ui/core/Slide';
 import CloseIcon from '@material-ui/icons/Close';
 import IconButton from '@material-ui/core/IconButton';
+import Backdrop from '@material-ui/core/Backdrop';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
@@ -59,6 +61,10 @@ const useStyles = makeStyles((theme) => ({
     top: theme.spacing(1),
     color: theme.palette.grey[500],
   },
+  backdrop: {
+    zIndex: theme.zIndex.drawer + 1,
+    color: '#fff',
+  },
 }));
 
 
@@ -75,6 +81,7 @@ export default function Skills() {
   const [open, setOpen] = React.useState(false);
   const [popupImages, setpopupImages] = useState("");
   const [popupTitles, setpopupTitles] = useState("");
+  const [loading, setloading] = useState(true);
 
   const handleClickOpen = (title, img) => {
     setpopupImages(img);
@@ -106,14 +113,15 @@ export default function Skills() {
         setOther(googleData[0].Others)
         setprogram(googleData[0].BasicPrograms)
         setdeployment(googleData[0].deployment)
+        setloading(false)
       },
       simpleSheet: true
     })
 
-
   }, []);
 
   return (
+
     <div className={classes.root}>
       <h1>Skills & Certificates</h1>
       <Grid container justify="center" spacing="2">
@@ -150,7 +158,7 @@ export default function Skills() {
         <Grid item xs={12}>
           <Paper className={classes.paper_left}>
             <h2>Certificates</h2>
-            <GridList  className={classes.gridList} cols={1.25}>
+            <GridList className={classes.gridList} cols={1.25}>
               {cerArray.map((tile) => (
                 <GridListTile key={tile.img} onClick={() => handleClickOpen(tile.title, tile.img)}>
                   <img src={tile.img} alt={tile.title} />
@@ -178,9 +186,9 @@ export default function Skills() {
         aria-describedby="alert-dialog-slide-description"
       >
         <DialogTitle id="alert-dialog-slide-title">{popupTitles}
-        <IconButton aria-label="close" className={classes.closeButton} onClick={handleClose}>
-          <CloseIcon />
-        </IconButton>
+          <IconButton aria-label="close" className={classes.closeButton} onClick={handleClose}>
+            <CloseIcon />
+          </IconButton>
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-slide-description">
@@ -193,9 +201,10 @@ export default function Skills() {
 
           </DialogContentText>
         </DialogContent>
-
       </Dialog>
-
+      <Backdrop className={classes.backdrop} open={loading} >
+        <CircularProgress color="inherit" />
+      </Backdrop>
     </div>
   );
 }

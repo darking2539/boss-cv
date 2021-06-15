@@ -1,11 +1,7 @@
 import React from "react";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Typography from "@material-ui/core/Typography";
-import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-import Avatar from "@material-ui/core/Avatar";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -38,7 +34,7 @@ export default function Portfolio() {
             <b>Smart Home with HomeAssistant (2021)</b> <br />
             Home Assistant is an open-source platform for build smart homes. 
             This project is implement smart home devices to this platform.
-            Infrastructure use cloud and Rasberrypi for run this platform shown on below photos  <br/><br/>   
+            Infrastructure use Cloud and Rasberry Pi for a run this platform shown on below photos.  <br/><br/>   
 
             <a href = {`${process.env.PUBLIC_URL}/details/homeassistant.jpg`}>Photos Link</a>  <br/>         
           </Paper>
@@ -68,7 +64,6 @@ export default function Portfolio() {
             express.js and MongoDB for backend, React.js with AdminLTE theme
             (Bootstrap Admin Dashboard Template) for frontend. <br/><br/>
             
-            ** ID: admin@gmail.com PW: 123456 for Login ** <br/>
             <a href="https://abosszz-app.herokuapp.com/">Website Link</a>  
             
           </Paper>
