@@ -123,10 +123,10 @@ export default function Skills() {
   return (
 
     <div className={classes.root}>
-      <h1>Skills & Certificates</h1>
-      <Grid container justify="center" spacing="2">
+      <Grid container justify="center" spacing="1">
         <Grid item xs={12}>
           <Paper className={classes.paper_left}>
+          <h2>Skills</h2>
             <u>
               <b>Programming Skills</b>
             </u>

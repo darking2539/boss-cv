@@ -76,7 +76,7 @@ export default function Portfolio() {
             <b>Smart Post Solution (2020)</b> <br/>
             This project is commercial for Thaipost Thailand. Build red post box for 
             IoT Box using LoRaWAN protocol which provides by CAT Telecom. This project divided two parts.
-            First, hardware for post box. Second, software platform for show result. Result shown on below. <br/><br/>            
+            First, hardware for post box. Second, software platform for show result. Video presentation shown on below. <br/><br/>            
             <a href="https://youtu.be/js-Gsy4u6oY">Youtube Link</a>  <br/>
           </Paper>
         </Grid>
