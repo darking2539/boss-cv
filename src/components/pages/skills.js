@@ -71,7 +71,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Skills() {
   const classes = useStyles();
-  const [skillArray, setSkillArray] = useState([]);
   const [cerArray, setCerArray] = useState([]);
   const [microcontroller, setmicrocontroller] = useState("");
   const [webstack, setWebstack] = useState("");
@@ -95,37 +94,31 @@ export default function Skills() {
 
 
   useEffect(() => {
+    fetchData();
+    fetchData();
+    fetchData();
+  }, []);
 
+  async function fetchData() {
+    
     Tabletop.init({
       key: '1lxxC3-QWbV4c5H5a3irB6XTrW93lwA5-n9Qjp6DN8AE',
       callback: googleData => {
         setCerArray(googleData);
-      },
-      simpleSheet: true
-    })
-
-    Tabletop.init({
-      key: '1wHBsxdgHXpnF8SdUlhZJU1qnE7eZW_fNu3APCIsrmC8',
-      callback: googleData => {
-        setSkillArray(googleData);
-        setmicrocontroller(googleData[0].Microcontroller)
-        setWebstack(googleData[0].WebStack)
-        setOther(googleData[0].Others)
-        setprogram(googleData[0].BasicPrograms)
-        setdeployment(googleData[0].deployment)
+        setmicrocontroller(googleData[0].Microcontroller);
+        setWebstack(googleData[0].WebStack);
+        setOther(googleData[0].Others);
+        setprogram(googleData[0].BasicPrograms);
+        setdeployment(googleData[0].deployment);
         setloading(false)
       },
       simpleSheet: true
     })
-
-  }, []);
-
+  }
 
 
   return (
-
     <div className={classes.root}>
-
       <Grid container justify="center" spacing="1">
         <Grid item xs={12}>
           <Paper className={classes.paper_left}>
