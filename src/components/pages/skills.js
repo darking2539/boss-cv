@@ -16,6 +16,7 @@ import Backdrop from '@material-ui/core/Backdrop';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Table from 'react-bootstrap/Table'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import axios from 'axios';
 
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
@@ -94,27 +95,21 @@ export default function Skills() {
 
 
   useEffect(() => {
-    fetchData();
-    fetchData();
-    fetchData();
+    
+    axios.get(`https://sheet.best/api/sheets/0aa84cd2-1074-4d37-8df8-fbe6565d3bb5`)
+      .then(googleData => {
+        console.log(googleData.data)
+        setCerArray(googleData.data);
+        setmicrocontroller(googleData.data[0].Microcontroller);
+        setWebstack(googleData.data[0].WebStack);
+        setOther(googleData.data[0].Others);
+        setprogram(googleData.data[0].BasicPrograms);
+        setdeployment(googleData.data[0].deployment);
+        setloading(false)
+      })
   }, []);
 
-  async function fetchData() {
-    
-    Tabletop.init({
-      key: '1lxxC3-QWbV4c5H5a3irB6XTrW93lwA5-n9Qjp6DN8AE',
-      callback: googleData => {
-        setCerArray(googleData);
-        setmicrocontroller(googleData[0].Microcontroller);
-        setWebstack(googleData[0].WebStack);
-        setOther(googleData[0].Others);
-        setprogram(googleData[0].BasicPrograms);
-        setdeployment(googleData[0].deployment);
-        setloading(false)
-      },
-      simpleSheet: true
-    })
-  }
+
 
 
   return (
