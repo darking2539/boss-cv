@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  bosscv:
+    container_name: bosscv
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    ports:
+      - 3000:80
