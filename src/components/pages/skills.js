@@ -98,7 +98,7 @@ export default function Skills() {
     
     axios.get(`https://sheet.best/api/sheets/0aa84cd2-1074-4d37-8df8-fbe6565d3bb5`)
       .then(googleData => {
-        console.log(googleData.data)
+        //console.log(googleData.data)
         setCerArray(googleData.data);
         setmicrocontroller(googleData.data[0].Microcontroller);
         setWebstack(googleData.data[0].WebStack);

@@ -28,6 +28,18 @@ export default function Portfolio() {
   return (
     <div className={classes.root}>
      <h1>Project</h1> 
+     <Grid container justify="center" spacing="2">
+        <Grid item xs={12}>
+          <Paper className={classes.paper_left}>
+            <b>Kubernetes deployment workshop (2021)</b> <br />
+            This workshop is deploy 4 microservices using GKE for deployment.
+            <br/><br/>   
+
+            <a href = "https://github.com/darking2539/k8s-workshop">Github Link</a>  <br/>         
+          </Paper>
+        </Grid>
+      </Grid>
+
       <Grid container justify="center" spacing="2">
         <Grid item xs={12}>
           <Paper className={classes.paper_left}>

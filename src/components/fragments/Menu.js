@@ -92,7 +92,7 @@ export default function SwipeableTemporaryDrawer() {
               <ListItemIcon>
                 <ImportContactsIcon style={{ fill: '#FFFFFF' }} />
               </ListItemIcon>
-              <ListItemText primary={<Typography type="body2" style={{ color: '#FFFFFF' }}>Portfolio (Project)</Typography>} />
+              <ListItemText primary={<Typography type="body2" style={{ color: '#FFFFFF' }}>Project & Workshop</Typography>} />
             </ListItem>
 
             <ListItem button key="skills" onClick={() => history.push('/skills')} >
