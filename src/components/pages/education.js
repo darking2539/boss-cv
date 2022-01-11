@@ -42,7 +42,7 @@ export default function Education() {
       <Grid container justify="center" spacing="2">
         <Grid item xs={12}>
           <Paper className={classes.paper_center}>
-            <b>Education</b>
+            <b >Education</b>
             <br />
             <Divider />
             <br />
@@ -93,7 +93,7 @@ export default function Education() {
         </Grid>
         <Grid item xs={12}>
           <Paper className={classes.paper_center}>
-            <b>Employment Experiences</b>
+            <b>Work Experiences</b>
             <br />
             <Divider />
             <br />

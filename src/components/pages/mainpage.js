@@ -46,7 +46,7 @@ export default function MainPage() {
       <Grid container justify="center" spacing="2">
         <Grid item xs={12}>
           <Paper className={classes.paper_center}>
-            This website is CV of Suphadet (Boss). Click my name on top of website to see more detail.
+            This website is CV of Suphadet (Boss).
           </Paper>
         </Grid>
       </Grid>

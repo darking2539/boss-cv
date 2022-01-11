@@ -27,7 +27,7 @@ export default function Portfolio() {
 
   return (
     <div className={classes.root}>
-     <h1>Project</h1> 
+     <h2>Project & Workshop</h2> 
      <Grid container justify="center" spacing="2">
         <Grid item xs={12}>
           <Paper className={classes.paper_left}>

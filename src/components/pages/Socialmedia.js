@@ -40,7 +40,7 @@ export default function Socialmedia() {
 
   return (
     <div className={classes.root}>
-      <h1>My Contacts</h1>
+      <h2>Social Media</h2>
       <Grid container justify="center" spacing="2">
         <Grid item xs={6}>
           <a
@@ -104,7 +104,7 @@ export default function Socialmedia() {
           >
             <Paper className={classes.paper_center}>
               <GitHubIcon /> <br />
-              Gitgub
+              Github
             </Paper>
           </a>
         </Grid>
