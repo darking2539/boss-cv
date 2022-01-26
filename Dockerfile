@@ -6,7 +6,7 @@ RUN yarn
 RUN yarn build
 
 # Stage 2 - the production environment
-FROM nginx:1.12-alpine
+FROM nginx
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=react-build /app/build /usr/share/nginx/html
 EXPOSE 80
